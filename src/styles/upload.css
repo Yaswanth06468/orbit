@@ -1,0 +1,79 @@
+/* ===== UPLOAD PAGE ===== */
+.upload-page { padding: 100px 0 60px; min-height: 100vh; }
+.upload-zone {
+  border: 2px dashed var(--clr-border);
+  border-radius: var(--radius-xl);
+  padding: 60px 40px;
+  text-align: center;
+  transition: var(--transition-base);
+  cursor: pointer;
+  position: relative;
+  background: var(--clr-bg-glass);
+}
+.upload-zone:hover, .upload-zone.drag-over {
+  border-color: var(--clr-primary);
+  background: rgba(108,92,231,0.05);
+  box-shadow: 0 0 40px rgba(108,92,231,0.1);
+}
+.upload-zone-icon {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background: rgba(108,92,231,0.1);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+  color: var(--clr-primary-light);
+}
+.upload-zone h3 { font-size: 1.3rem; margin-bottom: 8px; }
+.upload-zone p { color: var(--clr-text-muted); font-size: 0.9rem; }
+.upload-zone input[type="file"] { display: none; }
+.upload-formats { margin-top: 16px; display: flex; gap: 8px; justify-content: center; }
+.upload-progress {
+  margin-top: 32px; padding: 24px;
+  background: var(--clr-bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--clr-border-light);
+}
+.upload-file-info {
+  display: flex; align-items: center; gap: 16px; margin-bottom: 16px;
+}
+.upload-file-icon {
+  width: 48px; height: 48px;
+  border-radius: var(--radius-md);
+  background: rgba(108,92,231,0.15);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--clr-primary-light);
+}
+.upload-file-name { font-weight: 600; }
+.upload-file-size { font-size: 0.8rem; color: var(--clr-text-muted); }
+/* Resume Preview */
+.resume-preview {
+  margin-top: 32px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+}
+.resume-section {
+  background: var(--clr-bg-card);
+  border: 1px solid var(--clr-border-light);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+.resume-section h3 {
+  font-size: 1rem; margin-bottom: 16px;
+  display: flex; align-items: center; gap: 8px;
+  color: var(--clr-primary-light);
+}
+.resume-skills-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.skill-tag {
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  background: rgba(108,92,231,0.12);
+  color: var(--clr-primary-light);
+  font-size: 0.8rem; font-weight: 500;
+}
+.experience-item { padding: 12px 0; border-bottom: 1px solid var(--clr-border-light); }
+.experience-item:last-child { border: none; }
+.experience-item h4 { font-size: 0.95rem; }
+.experience-item .company { color: var(--clr-secondary); font-size: 0.85rem; }
+.experience-item .duration { color: var(--clr-text-muted); font-size: 0.8rem; }
+@media (max-width: 768px) {
+  .resume-preview { grid-template-columns: 1fr; }
+}

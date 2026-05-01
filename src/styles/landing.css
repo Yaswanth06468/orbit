@@ -1,0 +1,155 @@
+/* ===== LANDING PAGE ===== */
+.landing-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 120px 24px 80px;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-orbit {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(108, 92, 231, 0.1);
+  animation: spin 30s linear infinite;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 800px;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: rgba(108, 92, 231, 0.1);
+  border: 1px solid rgba(108, 92, 231, 0.3);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--clr-primary-light);
+  margin-bottom: 28px;
+}
+.hero-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--clr-text-muted);
+  max-width: 560px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.landing-stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 80px;
+}
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+}
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--clr-text-muted);
+  margin-top: 4px;
+}
+.landing-features {
+  padding: 100px 24px;
+  background: var(--clr-bg-secondary);
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.feature-card {
+  background: var(--clr-bg-card);
+  border: 1px solid var(--clr-border-light);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  text-align: center;
+  transition: var(--transition-base);
+}
+.feature-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--clr-border);
+  box-shadow: var(--shadow-glow);
+}
+.feature-icon {
+  width: 56px; height: 56px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+.feature-icon.purple { background: rgba(108,92,231,0.15); color: var(--clr-primary-light); }
+.feature-icon.cyan { background: rgba(0,210,255,0.15); color: var(--clr-secondary); }
+.feature-icon.pink { background: rgba(255,107,157,0.15); color: var(--clr-accent); }
+.feature-icon.green { background: rgba(0,230,118,0.12); color: var(--clr-success); }
+.feature-icon.yellow { background: rgba(255,217,61,0.12); color: var(--clr-warning); }
+.feature-card h3 { font-size: 1.15rem; margin-bottom: 10px; }
+.feature-card p { font-size: 0.9rem; color: var(--clr-text-muted); line-height: 1.6; }
+.landing-how { padding: 100px 24px; }
+.how-steps {
+  display: flex; gap: 32px;
+  max-width: 1280px; margin: 48px auto 0;
+  position: relative;
+}
+.how-steps::before {
+  content: '';
+  position: absolute; top: 32px; left: 32px; right: 32px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--clr-primary), var(--clr-secondary), var(--clr-accent));
+}
+.step-card { flex: 1; text-align: center; position: relative; z-index: 1; }
+.step-number {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: var(--clr-bg-primary);
+  border: 2px solid var(--clr-primary);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+  font-family: var(--font-heading);
+  font-size: 1.2rem; font-weight: 700;
+  color: var(--clr-primary-light);
+}
+.step-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+.step-card p { font-size: 0.85rem; color: var(--clr-text-muted); max-width: 200px; margin: 0 auto; }
+.landing-footer {
+  padding: 40px 24px;
+  border-top: 1px solid var(--clr-border-light);
+  text-align: center;
+  color: var(--clr-text-dim);
+  font-size: 0.85rem;
+}
+@media (max-width: 768px) {
+  .features-grid { grid-template-columns: 1fr; }
+  .how-steps { flex-direction: column; align-items: center; }
+  .how-steps::before { display: none; }
+  .landing-stats { flex-direction: column; gap: 24px; align-items: center; }
+}

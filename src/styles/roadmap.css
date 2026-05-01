@@ -1,0 +1,58 @@
+/* ===== ROADMAP PAGE ===== */
+.roadmap-page { padding: 100px 0 60px; min-height: 100vh; }
+.roadmap-container {
+  max-width: 900px; margin: 0 auto;
+  position: relative; padding-left: 40px;
+}
+.roadmap-container::before {
+  content: ''; position: absolute; left: 16px; top: 0; bottom: 0;
+  width: 2px; background: linear-gradient(180deg, var(--clr-primary), var(--clr-secondary), var(--clr-accent));
+}
+.roadmap-milestone {
+  position: relative; margin-bottom: 48px;
+  background: var(--clr-bg-card); border: 1px solid var(--clr-border-light);
+  border-radius: var(--radius-lg); padding: 24px;
+  animation: slideInRight 0.5s ease forwards; opacity: 0;
+}
+.milestone-dot {
+  position: absolute; left: -34px; top: 24px;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--clr-bg-primary); border: 3px solid var(--clr-primary);
+  z-index: 1;
+}
+.milestone-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 16px;
+}
+.milestone-time {
+  font-family: var(--font-heading); font-weight: 700; color: var(--clr-primary-light);
+  font-size: 0.9rem; letter-spacing: 0.05em; text-transform: uppercase;
+}
+.milestone-title { font-size: 1.2rem; margin-top: 4px; }
+.milestone-items {
+  display: flex; flex-direction: column; gap: 12px;
+}
+.milestone-item {
+  display: flex; gap: 12px; align-items: center;
+  font-size: 0.9rem; color: var(--clr-text-muted);
+}
+.milestone-item input[type="checkbox"] {
+  width: 18px; height: 18px; cursor: pointer;
+  accent-color: var(--clr-primary);
+}
+.milestone-item.completed {
+  text-decoration: line-through; opacity: 0.6;
+}
+.milestone-footer {
+  margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--clr-border-light);
+  display: flex; gap: 12px;
+}
+.milestone-tag {
+  font-size: 0.75rem; padding: 4px 10px; border-radius: var(--radius-sm);
+  background: var(--clr-bg-glass); border: 1px solid var(--clr-border-light);
+  color: var(--clr-text-muted);
+}
+@media (max-width: 640px) {
+  .roadmap-container { padding-left: 30px; }
+  .milestone-dot { left: -24px; width: 16px; height: 16px; }
+}

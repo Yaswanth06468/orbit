@@ -1,0 +1,62 @@
+/* ===== MOCK INTERVIEW PAGE ===== */
+.interview-page { padding: 100px 0 60px; min-height: 100vh; }
+.interview-container { max-width: 800px; margin: 0 auto; }
+.interview-setup {
+  text-align: center; padding: 48px;
+  background: var(--clr-bg-card); border-radius: var(--radius-xl);
+  border: 1px solid var(--clr-border-light);
+}
+.interview-live {
+  display: flex; flex-direction: column; gap: 24px;
+}
+.interview-question-card {
+  background: var(--clr-bg-card); border: 1px solid var(--clr-primary);
+  border-radius: var(--radius-xl); padding: 32px;
+  box-shadow: var(--shadow-glow);
+}
+.question-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 20px;
+}
+.question-number {
+  font-size: 0.85rem; font-weight: 600; color: var(--clr-primary-light);
+  text-transform: uppercase; letter-spacing: 0.05em;
+}
+.interview-timer {
+  font-family: 'Courier New', monospace; font-weight: 700;
+  font-size: 1.2rem; color: var(--clr-accent);
+}
+.question-text {
+  font-size: 1.3rem; font-weight: 600; line-height: 1.4; margin-bottom: 24px;
+}
+.answer-area textarea {
+  width: 100%; min-height: 200px; padding: 20px;
+  background: rgba(0,0,0,0.2); border: 1px solid var(--clr-border-light);
+  border-radius: var(--radius-lg); color: var(--clr-text);
+  font-size: 1rem; line-height: 1.6; resize: vertical;
+}
+.interview-controls {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: 24px;
+}
+.interview-feedback {
+  background: var(--clr-bg-card); border: 1px solid var(--clr-success);
+  border-radius: var(--radius-xl); padding: 32px;
+  margin-top: 24px;
+}
+.feedback-score {
+  display: flex; align-items: baseline; gap: 8px; margin-bottom: 16px;
+}
+.feedback-score .num { font-size: 2.5rem; font-weight: 700; color: var(--clr-success); }
+.feedback-score .label { color: var(--clr-text-muted); }
+.feedback-points {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+}
+.feedback-point {
+  padding: 16px; background: var(--clr-bg-glass); border-radius: var(--radius-md);
+}
+.feedback-point h5 { font-size: 0.9rem; margin-bottom: 8px; color: var(--clr-secondary); }
+.feedback-point p { font-size: 0.85rem; color: var(--clr-text-muted); }
+@media (max-width: 640px) {
+  .feedback-points { grid-template-columns: 1fr; }
+}
