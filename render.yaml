@@ -1,10 +1,22 @@
 services:
+  # Frontend Static Site
   - type: static
-    name: orbit-ai-resume
-    rootDir: .
+    name: orbit-frontend
+    rootDir: frontend
     buildCommand: npm install && npm run build
     publishDir: dist
     routes:
       - type: rewrite
         source: /*
         destination: /index.html
+
+  # Backend API Service
+  - type: web
+    name: orbit-backend
+    env: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 5000
