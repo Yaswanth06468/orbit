@@ -1,7 +1,6 @@
 services:
   - type: static
     name: orbit-ai-resume
-    env: static
     buildCommand: npm install && npm run build
     publishDir: dist
     routes:
