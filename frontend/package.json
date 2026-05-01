@@ -13,6 +13,7 @@
     "vite": "^8.0.10"
   },
   "dependencies": {
+    "orbit-monorepo": "file:..",
     "pdfjs-dist": "^5.7.284"
   }
 }
